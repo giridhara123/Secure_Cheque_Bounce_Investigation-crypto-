@@ -1,82 +1,72 @@
-Certainly! Here’s how you can structure it as a professional and clean README.md file for your repository:
+Perfect. Here is your entire content formatted as a single README.md in code block style so that it looks like you pasted the full content inside a single Markdown ``` block.
 
 ⸻
 
-Secure Cheque Bounce Investigation System
+
+
+# Secure Cheque Bounce Investigation System
 
 A multi-layered secure cheque verification system using Visual Cryptography, SHA-256 hashing, and Two-Factor Authentication to prevent cheque tampering and fraud.
 
-⸻
-
-📑 Index Terms
+## 📑 Index Terms
 
 Bank Cheque Verification, Visual Cryptography, Two-Factor Authentication, XOR-based Secret Sharing, SHA-256, Financial Security, Tamper Detection.
 
-⸻
-
-📝 Overview
+## 📝 Overview
 
 This system addresses security challenges in traditional cheque processing by implementing a multi-layered verification process. It leverages visual cryptography to split cheque images into two complementary shares, ensures tamper detection using SHA-256 hashing, and secures banker access via Duo two-factor authentication.
 
-⸻
+## 🚀 Features
 
-🚀 Features
-	•	XOR-based Visual Cryptography: Splits cheque images into two shares.
-	•	SHA-256 Integrity Checking: Detects tampering through cryptographic hashing.
-	•	Duo Two-Factor Authentication: Secures banker login via push notifications.
-	•	Role-based Access Control: Distinct interfaces for customers and bankers.
-	•	Secure Email Transmission: Sends Share 1 securely via email.
-	•	Encrypted Database Storage: Stores Share 2 and metadata securely.
-	•	User-friendly Web Interface: Built using Streamlit for easy navigation.
+- XOR-based Visual Cryptography: Splits cheque images into two shares.
+- SHA-256 Integrity Checking: Detects tampering through cryptographic hashing.
+- Duo Two-Factor Authentication: Secures banker login via push notifications.
+- Role-based Access Control: Distinct interfaces for customers and bankers.
+- Secure Email Transmission: Sends Share 1 securely via email.
+- Encrypted Database Storage: Stores Share 2 and metadata securely.
+- User-friendly Web Interface: Built using Streamlit for easy navigation.
 
-⸻
+## 🏛️ System Architecture
 
-🏛️ System Architecture
-	1.	Customer Interface
-	•	Upload cheque images and provide verification details.
-	2.	Visual Cryptography Engine
-	•	Generate XOR-based shares and compute SHA-256 hash.
-	3.	Authentication Module
-	•	Duo push-based multi-factor authentication for bankers.
-	4.	Verification Interface
-	•	Reconstruct cheque and validate integrity.
+1. Customer Interface: Upload cheque images and provide verification details.
+2. Visual Cryptography Engine: Generate XOR-based shares and compute SHA-256 hash.
+3. Authentication Module: Duo push-based multi-factor authentication for bankers.
+4. Verification Interface: Reconstruct cheque and validate integrity.
 
-⸻
+## 🔄 Workflows
 
-🔄 Workflows
+### 🧑‍💼 Customer Workflow
 
-🧑‍💼 Customer Workflow
-	1.	Upload signed cheque image.
-	2.	Enter cheque number and usage message.
-	3.	Provide banker’s email.
-	4.	Submit for share generation.
-	5.	System emails Share 1 to banker and stores Share 2 securely.
+1. Upload signed cheque image.
+2. Enter cheque number and usage message.
+3. Provide banker’s email.
+4. Submit for share generation.
+5. System emails Share 1 to banker and stores Share 2 securely.
 
-🏦 Banker Workflow
-	1.	Login with username/password.
-	2.	Approve Duo push notification on mobile device.
-	3.	Enter cheque number to verify.
-	4.	Upload Share 1 (received via email).
-	5.	System retrieves Share 2, reconstructs cheque, and verifies integrity.
-	6.	View verification result.
+### 🏦 Banker Workflow
 
-⸻
+1. Login with username/password.
+2. Approve Duo push notification on mobile device.
+3. Enter cheque number to verify.
+4. Upload Share 1 (received via email).
+5. System retrieves Share 2, reconstructs cheque, and verifies integrity.
+6. View verification result.
 
-🛠️ Technology Stack
-	•	Backend: Python
-	•	Web Framework: Streamlit
-	•	Image Processing: OpenCV (cv2)
-	•	Database: MySQL
-	•	Authentication: Duo Security SDK
-	•	Email: SMTP via smtplib
-	•	Cryptography: NumPy & hashlib
+## 🛠️ Technology Stack
 
-⸻
+- Backend: Python
+- Web Framework: Streamlit
+- Image Processing: OpenCV (cv2)
+- Database: MySQL
+- Authentication: Duo Security SDK
+- Email: SMTP via smtplib
+- Cryptography: NumPy & hashlib
 
-⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 
-1. Install Dependencies
+### 1. Install Dependencies
 
+bash
 pip install -r requirements.txt
 
 2. Configure Environment Variables (.env)
@@ -117,18 +107,12 @@ CREATE TABLE bankers (
 
 streamlit run app.py
 
-
-
-⸻
-
 🛡️ Security Considerations
 	•	Credentials secured via environment variables.
 	•	Temporary files removed after processing.
 	•	Input validation against SQL Injection.
 	•	Secure email transmission for Share 1.
 	•	Two-factor authentication to prevent unauthorized access.
-
-⸻
 
 ⚡ Performance Benchmarks
 
@@ -137,10 +121,6 @@ Share Generation	~0.6 sec
 Verification	~0.9 sec
 Email Delivery	~4.4 sec
 Authentication	~6.2 sec
-
-
-
-⸻
 
 🧩 Implementation Details
 
@@ -161,12 +141,10 @@ Authentication	~6.2 sec
 	•	Step 1: Username/Password verification.
 	•	Step 2: Duo Push Notification to banker’s registered device.
 
-⸻
-
 📬 Contact
 
-For questions or issues, please contact Your Name.
+For any questions or issues, please contact Your Name.
 
-⸻
+---
 
-Would you like me to generate the requirements.txt content as well?
+Let me know if you'd like a ready-to-download `.md` file.
