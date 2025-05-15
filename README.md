@@ -150,4 +150,4 @@ streamlit run app.py
 
 ## 📬 Contact
 
-For any questions or issues, please contact [Your Name](mailto:your_email@example.com).
+For any questions or issues, please contact [Giridhara venkat vootla](vootlagiridharavenkat@gmail.com).
