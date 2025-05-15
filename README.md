@@ -1,9 +1,3 @@
-Perfect. Here is your entire content formatted as a single README.md in code block style so that it looks like you pasted the full content inside a single Markdown ``` block.
-
-⸻
-
-
-
 # Secure Cheque Bounce Investigation System
 
 A multi-layered secure cheque verification system using Visual Cryptography, SHA-256 hashing, and Two-Factor Authentication to prevent cheque tampering and fraud.
@@ -66,11 +60,13 @@ This system addresses security challenges in traditional cheque processing by im
 
 ### 1. Install Dependencies
 
-bash
+```bash
 pip install -r requirements.txt
+```
 
-2. Configure Environment Variables (.env)
+### 2. Configure Environment Variables (.env)
 
+```
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 DB_NAME=your_db_name
@@ -82,9 +78,11 @@ DUO_IKEY=your_duo_integration_key
 DUO_SKEY=your_duo_secret_key
 DUO_HOST=your_duo_api_hostname
 APP_BASE_URL=http://localhost:8501
+```
 
-3. Create MySQL Database Schema
+### 3. Create MySQL Database Schema
 
+```sql
 CREATE TABLE cheques (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cheque_number VARCHAR(50) UNIQUE,
@@ -102,49 +100,54 @@ CREATE TABLE bankers (
     email VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
-4. Run the Application
+### 4. Run the Application
 
+```bash
 streamlit run app.py
+```
 
-🛡️ Security Considerations
-	•	Credentials secured via environment variables.
-	•	Temporary files removed after processing.
-	•	Input validation against SQL Injection.
-	•	Secure email transmission for Share 1.
-	•	Two-factor authentication to prevent unauthorized access.
+## 🛡️ Security Considerations
 
-⚡ Performance Benchmarks
+- Credentials secured via environment variables.
+- Temporary files removed after processing.
+- Input validation against SQL Injection.
+- Secure email transmission for Share 1.
+- Two-factor authentication to prevent unauthorized access.
 
-Process	Average Time
-Share Generation	~0.6 sec
-Verification	~0.9 sec
-Email Delivery	~4.4 sec
-Authentication	~6.2 sec
+## ⚡ Performance Benchmarks
 
-🧩 Implementation Details
+| Process             | Average Time |
+|--------------------|--------------|
+| Share Generation    | ~0.6 sec     |
+| Verification        | ~0.9 sec     |
+| Email Delivery      | ~4.4 sec     |
+| Authentication     | ~6.2 sec     |
 
-1. Visual Cryptography (XOR-Based)
-	•	Share Generation:
-	•	S1: Random matrix of same dimensions as cheque image C.
-	•	S2 = C ⊕ S1
-	•	Reconstruction:
-	•	C = S1 ⊕ S2
+## 🧩 Implementation Details
 
-2. SHA-256 Integrity Verification
-	1.	Compute SHA-256 hash of the original cheque image.
-	2.	Store hash in the database with Share 2.
-	3.	On verification, reconstruct cheque using S1 and S2.
-	4.	Compute and compare SHA-256 hash with stored hash to detect tampering.
+### 1. Visual Cryptography (XOR-Based)
 
-3. Two-Factor Authentication
-	•	Step 1: Username/Password verification.
-	•	Step 2: Duo Push Notification to banker’s registered device.
+- Share Generation:
+  - S1: Random matrix of same dimensions as cheque image C.
+  - S2 = C ⊕ S1
 
-📬 Contact
+- Reconstruction:
+  - C = S1 ⊕ S2
 
-For any questions or issues, please contact Your Name.
+### 2. SHA-256 Integrity Verification
 
----
+1. Compute SHA-256 hash of the original cheque image.
+2. Store hash in the database with Share 2.
+3. On verification, reconstruct cheque using S1 and S2.
+4. Compute and compare SHA-256 hash with stored hash to detect tampering.
 
-Let me know if you'd like a ready-to-download `.md` file.
+### 3. Two-Factor Authentication
+
+- Step 1: Username/Password verification.
+- Step 2: Duo Push Notification to banker’s registered device.
+
+## 📬 Contact
+
+For any questions or issues, please contact [Your Name](mailto:your_email@example.com).
